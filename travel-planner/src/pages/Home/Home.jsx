@@ -1,5 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import './Home.css'
+import bgVid from '../../assets/bgVid.mp4'
+
 
 export default function Home() {
   const navigate = useNavigate();
@@ -14,11 +17,19 @@ export default function Home() {
   }
 
   return (
+     <div className="landing-container">
+      
+
     <div className="home">
+      <video autoPlay loop muted playsInline className="background-video">
+        <source src={bgVid} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <section className="hero">
         <div className="hero-content">
-          <h1>Plan your perfect trip</h1>
-          <p>Enter a destination and travel dates — we'll build an itinerary for you.</p>
+          <h2>Let's Plan Your Trips</h2>
+          <h1>Together...</h1>
+          <p>Live your best moments</p>
 
           <form className="search-form" onSubmit={handleSubmit}>
             <input
@@ -27,6 +38,7 @@ export default function Home() {
               placeholder="Where are you going? e.g. Paris"
               aria-label="destination"
               required
+              className="input-value"
             />
 
             <input
@@ -56,6 +68,7 @@ export default function Home() {
           <div className="card">New York</div>
         </div>
       </section>
+    </div>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <main style={{ minHeight: "70vh", padding: "1rem" }}>
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/destination" element={<Destination />} />

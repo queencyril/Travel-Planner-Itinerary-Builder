@@ -2,7 +2,7 @@
 
 /* nav */
 .nav {
-  border-bottom: 1px solid #eee;
+  border-bottom: 3px solid var(--accent);
   background: #efecec18;
 }
 .nav-list {
@@ -22,7 +22,7 @@
 }
 
 .page-logo_link span{
-  color:#111e85fb;
+  color: var(--accent);
 }
 
 .logo-first-letter{
@@ -50,6 +50,6 @@
   font-weight: 700;
 }
 .nav-links a.active {
-  color:#111e85fb;
+  color: var(--accent);
   font-weight: 700;
 }
