@@ -105,3 +105,39 @@
 .card-btn:hover {
   background: #023e8a;
 }
+
+.bookmark-message {
+  color: #39f8e2;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between; /* buttons on same line with space */
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.card-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #39f8e2;
+  color: #fff;
+}
+
+.save-btn {
+  background-color: transparent;
+  color: #39f8e2;
+  font-size: 1.2rem;
+  padding: 0;
+}
+
+.bookmark-message {
+  color: #39f8e2;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}

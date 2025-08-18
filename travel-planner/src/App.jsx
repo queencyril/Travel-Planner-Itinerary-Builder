@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/HomePage";
 import ItineraryPage from "./pages/ItineraryPage";
 import DestinationPage from "./pages/DestinationPage";
+import BookmarksPage from "./pages/BookmarksPage";
+
 
 export default function App() {
   return (
@@ -16,6 +18,7 @@ export default function App() {
           <Route path="/itinerarypage" element={<ItineraryPage />} />
           <Route path="/destinationpage" element={<DestinationPage />} />
           <Route path="/destinationpage/:name" element={<DestinationPage />} />
+          <Route path="/bookmarks" element={<BookmarksPage />} />
         </Routes>
       </main>
     </Router>

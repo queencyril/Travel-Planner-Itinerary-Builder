@@ -14,6 +14,7 @@ export default function Navbar() {
           <li><NavLink to="/" end>Home&#128726;</NavLink></li>
           <li><NavLink to="/destinationpage">Destinations&#128747;</NavLink></li>
           <li><NavLink to="/itinerarypage">Itinerary&#128195;</NavLink></li>
+          <li><NavLink to="/bookmarks">Bookmarks❤️</NavLink></li>
         </ul>
       </div>
     </nav>
