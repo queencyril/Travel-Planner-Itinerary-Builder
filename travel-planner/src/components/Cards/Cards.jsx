@@ -1,5 +1,5 @@
 import React from "react";
-import "./PopularDestinations.css";
+import './Cards.css'
 
 function Card({ image, title, description, price }) {
   return (

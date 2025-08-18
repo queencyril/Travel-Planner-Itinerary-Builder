@@ -1,33 +1,46 @@
 import React from "react";
-import Card from "../Cards/Cards.jsx";
-import "./PopularDestinations.css";
+import Card from "../Cards/Cards";
+// import Paris from '../../../public/assets/Paris.png'
 
-function PopularDestinations() {
+const PopularDestinations = () => {
+  const destinations = [
+    {
+      title: "Paris",
+      description: "The city of lights and romance",
+      image: "/assets/Paris.jpg" 
+    },
+    {
+      title: "London",
+      description: "Explore the UK capital with rich history",
+      image: "/assets/London.jpg",
+    },
+    {
+      title: "Dubai",
+      description: "Luxury, shopping, and modern architecture",
+      image: "/assets/Dubai.jpg",
+    },
+    {
+      title: "Tokyo",
+      description: "Tradition meets technology",
+      image: "/assets/Greece.jpg",
+    },
+  ];
+
   return (
-    <div>
+    <section>
       <h2>Popular Destinations</h2>
-      <div className="card-container">
-        <Card
-          image="/images/paris.jpg"
-          title="Paris"
-          description="The city of lights, romance, and great croissants."
-          price="$1,200"
-        />
-        <Card
-          image="/images/tokyo.jpg"
-          title="Tokyo"
-          description="A vibrant blend of tradition and futuristic tech."
-          price="$1,800"
-        />
-        <Card
-          image="/images/newyork.jpg"
-          title="New York"
-          description="The city that never sleeps — and has great pizza."
-          price="$1,500"
-        />
+      <div className="cards">
+        {destinations.map((place, index) => (
+          <Card
+            key={index}
+            image={place.image}
+            title={place.title}
+            description={place.description}
+          />
+        ))}
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default PopularDestinations;

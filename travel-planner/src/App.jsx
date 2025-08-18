@@ -6,6 +6,8 @@ import Home from "./pages/Home/Home"
 import Destination from "./pages/Destination/Destination";
 import Itinerary from "./pages/Itinerary/Itinerary";
 import './App.css'
+import PopularDestinations from "./components/PopularDestination/PopularDestination";
+
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
           <Route path="/itinerary" element={<Itinerary />} />
         </Routes>
       </main>
+      
+      <PopularDestinations />
       <Footer />
     </>
   );

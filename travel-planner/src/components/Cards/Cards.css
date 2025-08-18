@@ -1,0 +1,13 @@
+.card {
+  width: 250px;   /* controls card width */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;         /* makes it fit the card width */
+  height: 180px;       /* fixed height */
+  object-fit: cover;   /* keeps aspect ratio without stretching */
+}

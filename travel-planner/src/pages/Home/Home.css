@@ -69,20 +69,32 @@
 }
 
 /* cards */
-.popular {
+/* Card.css */
+.card {
+  background: #fff;
+  border-radius: 10px;
   padding: 1rem;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
 }
+
+.card-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+}
+
 .cards {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-}
-.card {
-  min-width: 120px;
-  padding: 1rem;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  background: #fff;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 
