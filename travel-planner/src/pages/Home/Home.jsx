@@ -57,12 +57,6 @@ export default function Home() {
             </form>
           </div>
         </section>
-
-        {/* Popular Destination Section
-
-        <section className="popular">
-           <PopularDestinations />
-        </section> */}
       </div>
     </div>
   );

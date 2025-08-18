@@ -1,13 +1,107 @@
-.card {
-  width: 250px;   /* controls card width */
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
+.popular-destinations {
+  padding: 2rem;
   text-align: center;
 }
 
-.card-image {
-  width: 100%;         /* makes it fit the card width */
-  height: 180px;       /* fixed height */
-  object-fit: cover;   /* keeps aspect ratio without stretching */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.345);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+
+.location-icon {
+  margin-right: 6px;
+  color: #e63946;
+}
+
+.card-price {
+  font-weight: bold;
+  color: #0077b6;
+  margin-bottom: .5rem;
+}
+
+
+
+.card-title {
+  font-size: 1.0rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+/* New: Location and Price on same line */
+.location-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-location {
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.location-icon {
+  margin-right: 6px;
+  color: #e63946;
+}
+
+.card-price {
+  font-weight: bold;
+  color: #0077b6;
+  font-size: 0.9rem;
+}
+
+/* Divider line */
+.divider {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 0.5rem 0;
+}
+
+.card-description {
+  font-size: 0.7rem;
+  color: #444;
+  margin-bottom: 1rem;
+  text-align: start;
+}
+
+.card-btn {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.0rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card-btn:hover {
+  background: #023e8a;
 }

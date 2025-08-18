@@ -7,6 +7,7 @@ import Destination from "./pages/Destination/Destination";
 import Itinerary from "./pages/Itinerary/Itinerary";
 import './App.css'
 import PopularDestinations from "./components/PopularDestination/PopularDestination";
+import Newsletter from "./components/Newsletter/Newsletter";
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
       </main>
       
       <PopularDestinations />
+      <Newsletter />
       <Footer />
     </>
   );

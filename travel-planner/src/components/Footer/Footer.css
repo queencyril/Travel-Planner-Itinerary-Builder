@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap");
+
+.page-logo_link span{
+  color: var(--accent);
+  
+
+.logo-first-letter{
+  font-family: "Fleur De Leah", cursive;
+  font-size: 30px;
+  margin-left: 2px;
+}
+}
