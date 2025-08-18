@@ -1,31 +1,23 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-import Home from "./pages/Home/Home"
-import Destination from "./pages/Destination/Destination";
-import Itinerary from "./pages/Itinerary/Itinerary";
 import './App.css'
-import PopularDestinations from "./components/PopularDestination/PopularDestination";
-import Newsletter from "./components/Newsletter/Newsletter";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import HomePage from "./pages/HomePage";
+import ItineraryPage from "./pages/ItineraryPage";
+import DestinationPage from "./pages/DestinationPage";
 
 export default function App() {
   return (
-    <>
+    <Router>
       <Navbar />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/destination" element={<Destination />} />
-          <Route path="/destination/:name" element={<Destination />} />
-          <Route path="/itinerary" element={<Itinerary />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/itinerarypage" element={<ItineraryPage />} />
+          <Route path="/destinationpage" element={<DestinationPage />} />
+          <Route path="/destinationpage/:name" element={<DestinationPage />} />
         </Routes>
       </main>
-      
-      <PopularDestinations />
-      <Newsletter />
-      <Footer />
-    </>
+    </Router>
   );
 }

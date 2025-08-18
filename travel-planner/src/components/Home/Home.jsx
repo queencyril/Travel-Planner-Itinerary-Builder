@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
-import Card from "../../components/Cards/Cards";
-import PopularDestinations from "../../components/PopularDestination/PopularDestination";
+import Card from "../Cards/Cards";
+import PopularDestinations from "../PopularDestination/PopularDestination";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ export default function Home() {
   function handleSubmit(e) {
     e.preventDefault();
     // For now pass search data via navigation state to Destination page
-    navigate("/destination", { state: { destination, startDate, endDate } });
+    navigate("/destinationpage", { state: { destination, startDate, endDate } });
   }
 
   return (

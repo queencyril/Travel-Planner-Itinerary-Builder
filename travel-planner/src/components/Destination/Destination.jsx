@@ -34,7 +34,7 @@ export default function Destination() {
             Google Map will appear here
           </div>
 
-          <Link to="/itinerary" state={{ destination, startDate, endDate }}>
+          <Link to="/itinerarypage" state={{ destination, startDate, endDate }}>
             <button>Generate Itinerary</button>
           </Link>
         </>

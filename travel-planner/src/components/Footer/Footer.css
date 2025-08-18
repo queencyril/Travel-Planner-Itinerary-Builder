@@ -2,11 +2,72 @@
 
 .page-logo_link span{
   color: var(--accent);
-  
+}
 
 .logo-first-letter{
   font-family: "Fleur De Leah", cursive;
   font-size: 30px;
   margin-left: 2px;
 }
+
+.footer {
+  background: #023e8a;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.logo-first-letter {
+  color: #ffb703;
+  font-size: 1.3rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffb703;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ffb703;
+}
+
+.footer-bottom {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
 }

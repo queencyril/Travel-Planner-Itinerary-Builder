@@ -1,12 +1,30 @@
 import React from "react";
-import './Footer.css'
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import "./Footer.css";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
-        <p className="page-logo_link">©  {new Date().getFullYear()}  <span> <span className="logo-first-letter"> E</span>xplore</span>Ease. — built with ❤️</p>
+      <div className="footer-top">
+       
+        <div className="footer-links">
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#privacy">Privacy Policy</a>
+        </div>
+        <div className="footer-socials">
+          <a href="#"><FaFacebookF /></a>
+          <a href="#"><FaTwitter /></a>
+          <a href="#"><FaInstagram /></a>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <p className="footer-logo">
+          © {new Date().getFullYear()} <span className="logo-first-letter">E</span>xploreEase — built with ❤️
+         by Oluchi Queen</p>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

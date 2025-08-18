@@ -12,8 +12,8 @@ export default function Navbar() {
 
         <ul className="nav-links">
           <li><NavLink to="/" end>Home&#128726;</NavLink></li>
-          <li><NavLink to="/destination">Destinations&#128747;</NavLink></li>
-          <li><NavLink to="/itinerary">Itinerary&#128195;</NavLink></li>
+          <li><NavLink to="/destinationpage">Destinations&#128747;</NavLink></li>
+          <li><NavLink to="/itinerarypage">Itinerary&#128195;</NavLink></li>
         </ul>
       </div>
     </nav>
