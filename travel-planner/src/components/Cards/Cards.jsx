@@ -8,11 +8,10 @@ const Card = ({ destination }) => {
   const [bookmarked, setBookmarked] = useState(false);
   const [message, setMessage] = useState("");
 
-  // Check if this destination is already bookmarked
+  // Check if destination already bookmarked on mount
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem("bookmarks")) || [];
-    const exists = saved.some((item) => item.id === destination.id);
-    setBookmarked(exists);
+    setBookmarked(saved.some((item) => item.id === destination.id));
   }, [destination.id]);
 
   // Toggle bookmark
@@ -21,27 +20,33 @@ const Card = ({ destination }) => {
 
     if (bookmarked) {
       saved = saved.filter((item) => item.id !== destination.id);
-      setMessage("Removed from bookmarks");
+      setMessage("❌ Removed from bookmarks");
     } else {
       saved.push(destination);
-      setMessage("Saved to bookmarks");
+      setMessage("✅ Saved to bookmarks");
     }
 
     localStorage.setItem("bookmarks", JSON.stringify(saved));
     setBookmarked(!bookmarked);
 
-    // Clear message after 2 seconds
+    // Clear message after 2s
     setTimeout(() => setMessage(""), 2000);
   };
 
-  // Navigate to DestinationPage with this destination
+  // Navigate to details page
   const goToDestinationPage = () => {
     navigate("/destinationpage", { state: { destination } });
   };
 
   return (
     <div className="card">
-      <img src={destination.image} alt={destination.name} className="card-img" />
+      <img
+        src={destination.image}
+        alt={destination.name}
+        className="card-img"
+        onClick={goToDestinationPage} // click image also opens details
+        style={{ cursor: "pointer" }}
+      />
 
       <div className="card-content">
         <h3 className="card-title">{destination.name}</h3>
@@ -52,8 +57,6 @@ const Card = ({ destination }) => {
           </p>
           <p className="card-price">{destination.price}</p>
         </div>
-
-        <hr className="divider" />
 
         <p className="card-description">{destination.description}</p>
 
