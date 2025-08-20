@@ -43,7 +43,7 @@ export default function Home() {
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
-                aria-label="start date"
+                aria-label="start date" required
               />
 
               <input
@@ -51,6 +51,7 @@ export default function Home() {
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
                 aria-label="end date"
+                required
               />
 
               <button type="submit">Search</button>
